@@ -2,7 +2,19 @@
 import React from "react";
 
 const App = () => {
-  return <div className="bg-blue-500">APP</div>;
+  const username = "John";
+
+  const names = ["Brad", "Mary", "Joe", "Sarah"];
+  return (
+    <div>
+      <h1 className="text-5xl">{username}</h1>
+      <ul>
+        {names.map((name, index) => (
+          <li key={index}>{name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
